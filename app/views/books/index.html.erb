@@ -1,0 +1,26 @@
+<h1>Books</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  <tr>
+    <td>リーダブルコード</td>
+    <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
+    <td>Show</td>
+    <td>Edit</td>
+    <td>Destroy</td>
+  </tr>
+</table>
+
+<!--投稿フォーム-->
+<h2>New book</h2>
+<%= form_with model:@book, url:'/books/create', local:true do |f| %>
+  <h3>Title</h3>
+  <%= f.text_field :title %>
+  <h3>Body</h3>
+  <%= f.text_area :body %>
+  <%= f.submit 'Create Book' %>
+<% end %>
+
+
