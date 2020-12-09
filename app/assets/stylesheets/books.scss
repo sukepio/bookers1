@@ -9,11 +9,6 @@
 
 }
 
-a:hover {
-  background-color: #000;
-  color: white;
-}
-
 .error-explanation {
   width: 450px;
   border: 2px solid red;
@@ -32,6 +27,10 @@ a:hover {
   margin-bottom: 0;
   background-color: #c00;
   color: #fff;
+}
+
+.error-explanation ul {
+  padding: 20px 80px;
 }
 
 label {
