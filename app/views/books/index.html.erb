@@ -1,5 +1,6 @@
+<!--投稿一覧-->
 <h1 class="headline">Books</h1>
-<table>
+<table cellspacing="10">
   <tr>
     <th>Title</th>
     <th>Body</th>
@@ -15,20 +16,30 @@
   <% end %>
 </table>
 
-<!--投稿フォーム-->
-<h2>New book</h2>
+<!--新規投稿-->
+<h2 class="new-book-headline">New book</h2>
 
-  <div class="form">
+<!--エラーメッセージ-->
+<% if @book.errors.any? %>  
+  <div class="error-explanation">
+    <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+    <ul>
     <% @book.errors.full_messages.each do |message| %>
-      <div class="form-error">
+      <li>
         <%= message %>
-      </div>
+      </li>
     <% end %>
-    <%= form_with model:@book, local:true do |f| %>
-      <h4>Title</h4>
+    </ul>  
+  </div>  
+<% end %>
+
+<!--新規投稿フォーム-->
+<%= form_with model:@book, local:true do |f| %>
+  <div class="form">
+      <%= f.label :title %> 
       <%= f.text_field :title %>
-      <h4>Body</h4>
+      <%= f.label :body %>
       <%= f.text_area :body %>
       <%= f.submit 'Create Book' %>
-    <% end %>
   </div>
+<% end %>

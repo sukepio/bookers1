@@ -14,8 +14,17 @@
  *= require_self
  */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 30px;
+}
+
+a {
+  color: black;
 }
 
 a:hover {
@@ -24,6 +33,6 @@ a:hover {
 }
 
 a:visited {
-    color: #666;
+  color: #666;
 }
 

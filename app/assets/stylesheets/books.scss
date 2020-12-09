@@ -5,10 +5,11 @@
 //flash css 
 .flash {
   color: green;
-  height: 30px;
-
+  margin: 40px;
 }
 
+
+// エラーメッセージのCSS
 .error-explanation {
   width: 450px;
   border: 2px solid red;
@@ -30,9 +31,11 @@
 }
 
 .error-explanation ul {
-  padding: 20px 80px;
+  padding: 30px 80px;
 }
 
+
+// 投稿フォームのCSS
 label {
   display: block;
 }
@@ -44,4 +47,27 @@ textarea {
 input {
   display: block;
   margin-bottom: 10px;
+}
+
+
+
+.headline {
+  margin-bottom: 10px;
+}
+
+
+.show {
+  padding-left: 40px;
+}
+
+h4 {
+  padding-bottom: 30px;
+}
+
+span {
+  font-weight: normal;
+}
+
+.new-book-headline {
+  padding: 10px 0;
 }
