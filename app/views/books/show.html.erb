@@ -3,5 +3,5 @@
   <h5>Body: <span><%= @book.body %></span></h5>
 </section>
 
-<%= link_to "Edit", "/books/%{@book.id}/edit" %>
+<%= link_to "Edit", edit_book_path(@book) %>
 <%= link_to "Back", "/books" %>
