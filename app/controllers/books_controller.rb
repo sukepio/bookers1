@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   def index
     @book = Book.new
-    @books = Book.all
+    @books = Book.all.order(created_at: :desc)
   end
 
   def show
@@ -9,7 +9,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    @books = Book.all
+    @books = Book.all.order(created_at: :desc)
     @book = Book.new(book_params)
     if @book.save
       flash[:notice] = "Book was successfully created."
