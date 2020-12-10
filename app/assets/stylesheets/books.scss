@@ -2,14 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//flash css 
+// フラッシュCSSここから
 .flash {
   color: green;
   margin: 40px;
 }
+// フラッシュCSSここまで
 
 
-// エラーメッセージのCSS
+// エラーメッセージのCSSここから
 .error-explanation {
   width: 450px;
   border: 2px solid red;
@@ -33,9 +34,10 @@
 .error-explanation ul {
   padding: 30px 80px;
 }
+// エラーメッセージのCSSここまで
 
 
-// 投稿フォームのCSS
+// 投稿フォームのCSSここから
 label {
   display: block;
 }
@@ -48,26 +50,27 @@ input {
   display: block;
   margin-bottom: 10px;
 }
+// 投稿フォームのCSSこここまで
 
 
-
+// ヘッドラインのCSSここから
 .headline {
   margin-bottom: 10px;
-}
-
-
-.show {
-  padding-left: 40px;
-}
-
-h4 {
-  padding-bottom: 30px;
-}
-
-span {
-  font-weight: normal;
 }
 
 .new-book-headline {
   padding: 10px 0;
 }
+// ヘッドラインのCSSここまで
+
+
+// 詳細画面のCSSここから
+.show p {
+  margin: 30px;
+  font-weight: bold;
+}
+
+span {
+  font-weight: normal;
+}
+// 詳細画面のCSSここまで

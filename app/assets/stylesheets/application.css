@@ -23,16 +23,19 @@ body {
   margin: 30px;
 }
 
+
+/*リンクのCSSここから*/
 a {
-  color: black;
+  color: #000;
+}
+
+a:visited {
+  color: #666;
 }
 
 a:hover {
   background-color: #000;
   color: white;
 }
-
-a:visited {
-  color: #666;
-}
+/*リンクのCSSここまで*/
 

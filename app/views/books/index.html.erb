@@ -1,5 +1,5 @@
-<!--投稿一覧-->
 <h1 class="headline">Books</h1>
+<!--投稿一覧ここから-->
 <table cellspacing="10">
   <tr>
     <th>Title</th>
@@ -15,26 +15,29 @@
     </tr>
   <% end %>
 </table>
+<!--投稿一覧ここまで-->
 
-<!--新規投稿-->
+<!--新規投稿ここから-->
 <h2 class="new-book-headline">New book</h2>
 
-<!--エラーメッセージ-->
-<% if @book.errors.any? %>  
-  <div class="error-explanation">
-    <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
-    <ul>
-    <% @book.errors.full_messages.each do |message| %>
-      <li>
-        <%= message %>
-      </li>
-    <% end %>
-    </ul>  
-  </div>  
-<% end %>
-
-<!--新規投稿フォーム-->
 <%= form_with model:@book, local:true do |f| %>
+
+　<!--エラーメッセージここから-->
+  <% if @book.errors.any? %>  
+    <div class="error-explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+      <ul>
+        <% @book.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+      <% end %>
+      </ul>  
+    </div>  
+  <% end %>
+  <!--エラーメッセージここまで-->
+
+  <!--新規投稿フォームここから-->
   <div class="form">
       <%= f.label :title %> 
       <%= f.text_field :title %>
@@ -42,4 +45,6 @@
       <%= f.text_area :body %>
       <%= f.submit 'Create Book' %>
   </div>
+  <!--新規投稿フォームここまで-->
 <% end %>
+<!--新規投稿ここ-->

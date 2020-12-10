@@ -1,8 +1,9 @@
-
+<!--詳細画面ここから-->
 <section class="show">
-  <h4>Title: <span><%= @book.title %></span></h5>
-  <h4>Body: <span><%= @book.body %></span></h5>
+  <p>Title: <span><%= @book.title %></span><p>
+  <p>Body: <span><%= @book.body %></span></p>
 </section>
+<!--詳細画面ここまで-->
 
 <%= link_to "Edit", edit_book_path(@book) %>
 <span>|</span>

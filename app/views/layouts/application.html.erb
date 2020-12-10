@@ -11,11 +11,13 @@
 
   <body>
     
+    <!--フラッシュここから-->
     <% if flash[:notice] %>
       <div class="flash">
         <%= flash[:notice] %>
       </div>
     <% end %>
+    <!--フラッシュここ-->
     
     <%= yield %>
   </body>
